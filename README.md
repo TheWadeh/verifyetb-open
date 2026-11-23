@@ -24,10 +24,9 @@ It is **not** a payment verifier. It never moves money, never confirms a
 payment to a third party, and never acts as a verification service. It only
 parses and organizes the messages already on your device.
 
-**Want a payment verifier instead?** You can build your own verifier app and
-plug into the Verifyetb verification API. Get an API key from
-[verifyetb.site/workspace](https://verifyetb.site/workspace) and use that key in
-your own verifier app to verify payments against the parsed data.
+If you want to build a payment verification feature on top of it, you don't have
+to rebuild everything. Go to [verifyetb.site/workspace](https://verifyetb.site/workspace),
+grab an API key and plug it in. 🔑
 
 ## What it does
 
