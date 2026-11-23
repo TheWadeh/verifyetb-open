@@ -10,7 +10,7 @@
 ## Screenshot
 
 <p align="center">
-  <img src="app/screenshot.jpeg" alt="Verifyetb screenshot" width="300">
+  <img src="app/screenshot.jpeg" alt="Verifyetb screenshot" width="100%">
 </p>
 
 ## What this is (and isn't)
