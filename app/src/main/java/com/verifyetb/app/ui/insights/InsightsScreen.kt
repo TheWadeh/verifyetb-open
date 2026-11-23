@@ -40,7 +40,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.verifyetb.app.ui.components.EmptyHint
 import com.verifyetb.app.ui.components.SectionLabel
-import com.verifyetb.app.ui.theme.AccentGold
+import com.verifyetb.app.ui.theme.AccentBlue
 import com.verifyetb.app.ui.theme.AccentGreen
 import com.verifyetb.app.ui.theme.AccentRust
 import com.verifyetb.app.ui.theme.AmountStyle
@@ -102,7 +102,7 @@ fun InsightsScreen(
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
             MiniStat("In", MoneyFormat.birr(ui.incoming), AccentGreen, Modifier.weight(1f))
             MiniStat("Out", MoneyFormat.birr(ui.outgoing), AccentRust, Modifier.weight(1f))
-            MiniStat("Fees", MoneyFormat.birr(ui.fees), AccentGold, Modifier.weight(1f))
+            MiniStat("Fees", MoneyFormat.birr(ui.fees), AccentBlue, Modifier.weight(1f))
         }
 
         Spacer(modifier = Modifier.height(22.dp))
@@ -142,9 +142,9 @@ private fun NetHero(net: Double, count: Int) {
             .fillMaxWidth()
             .clip(RoundedCornerShape(28.dp))
             .background(
-                Brush.linearGradient(listOf(BgSurface, BgElevated, AccentGold.copy(alpha = 0.14f))),
+                Brush.linearGradient(listOf(BgSurface, BgElevated, AccentBlue.copy(alpha = 0.14f))),
             )
-            .border(1.dp, AccentGold.copy(alpha = 0.28f), RoundedCornerShape(28.dp))
+            .border(1.dp, AccentBlue.copy(alpha = 0.28f), RoundedCornerShape(28.dp))
             .padding(20.dp),
     ) {
         Text("Net this period", color = TextMuted, style = MaterialTheme.typography.labelMedium)
@@ -251,7 +251,7 @@ private fun CategoryRow(slice: CategorySlice) {
                 modifier = Modifier
                     .fillMaxHeight()
                     .fillMaxWidth(slice.fraction)
-                    .background(AccentGold),
+                    .background(AccentBlue),
             )
         }
     }
@@ -271,7 +271,7 @@ private fun Heatmap(
                         cell.inFuture || cell.count == 0 || maxHeat == 0 -> 0.18f
                         else -> 0.28f + 0.72f * (cell.count.toFloat() / maxHeat.toFloat())
                     }
-                    val color = if (cell.count == 0 || cell.inFuture) Divider else AccentGold.copy(alpha = alpha)
+                    val color = if (cell.count == 0 || cell.inFuture) Divider else AccentBlue.copy(alpha = alpha)
                     Box(
                         modifier = Modifier
                             .size(16.dp)
@@ -296,12 +296,12 @@ private fun Heatmap(
 private fun PeriodChip(label: String, selected: Boolean, onClick: () -> Unit) {
     Text(
         text = label,
-        color = if (selected) AccentGold else TextMuted,
+        color = if (selected) AccentBlue else TextMuted,
         style = MaterialTheme.typography.labelLarge,
         modifier = Modifier
             .clip(RoundedCornerShape(999.dp))
-            .background(if (selected) AccentGold.copy(alpha = 0.16f) else BgSurface)
-            .border(1.dp, if (selected) AccentGold else Divider, RoundedCornerShape(999.dp))
+            .background(if (selected) AccentBlue.copy(alpha = 0.16f) else BgSurface)
+            .border(1.dp, if (selected) AccentBlue else Divider, RoundedCornerShape(999.dp))
             .clickable(role = Role.Button, onClick = onClick)
             .padding(horizontal = 14.dp, vertical = 8.dp),
     )

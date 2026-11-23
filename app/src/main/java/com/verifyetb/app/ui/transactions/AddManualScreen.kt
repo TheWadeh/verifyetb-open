@@ -46,8 +46,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.verifyetb.app.data.local.entity.TransactionEntity
-import com.verifyetb.app.ui.theme.AccentGold
-import com.verifyetb.app.ui.theme.OnGold
+import com.verifyetb.app.ui.theme.AccentBlue
+import com.verifyetb.app.ui.theme.OnBlue
 import com.verifyetb.app.ui.theme.BgPrimary
 import com.verifyetb.app.ui.theme.BgSurface
 import com.verifyetb.app.ui.theme.Divider
@@ -183,7 +183,7 @@ fun AddManualScreen(
             }
 
             if (error != null) {
-                Text(error!!, color = AccentGold, modifier = Modifier.padding(top = 12.dp))
+                Text(error!!, color = AccentBlue, modifier = Modifier.padding(top = 12.dp))
             }
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -201,7 +201,7 @@ fun AddManualScreen(
                 enabled = !saving,
                 modifier = Modifier.fillMaxWidth().height(50.dp),
                 shape = RoundedCornerShape(8.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = AccentGold, contentColor = OnGold),
+                colors = ButtonDefaults.buttonColors(containerColor = AccentBlue, contentColor = OnBlue),
             ) {
                 Text(if (saving) "Saving…" else if (type == TransactionEntity.TYPE_DEBIT) "Save sent" else "Save received")
             }
@@ -275,14 +275,14 @@ private fun Field(
 
 @Composable
 private fun fieldColors() = OutlinedTextFieldDefaults.colors(
-    focusedBorderColor = AccentGold,
+    focusedBorderColor = AccentBlue,
     unfocusedBorderColor = Divider,
     focusedTextColor = TextPrimary,
     unfocusedTextColor = TextPrimary,
-    cursorColor = AccentGold,
+    cursorColor = AccentBlue,
     focusedContainerColor = BgSurface,
     unfocusedContainerColor = BgSurface,
-    focusedLabelColor = AccentGold,
+    focusedLabelColor = AccentBlue,
     unfocusedLabelColor = TextMuted,
 )
 
@@ -290,6 +290,6 @@ private fun fieldColors() = OutlinedTextFieldDefaults.colors(
 private fun chipColors() = FilterChipDefaults.filterChipColors(
     containerColor = BgSurface,
     labelColor = TextMuted,
-    selectedContainerColor = AccentGold.copy(alpha = 0.22f),
-    selectedLabelColor = AccentGold,
+    selectedContainerColor = AccentBlue.copy(alpha = 0.22f),
+    selectedLabelColor = AccentBlue,
 )

@@ -11,11 +11,11 @@ data class BirrColors(
     val surfaceElevated: Color,
     val textPrimary: Color,
     val textMuted: Color,
-    val gold: Color,
+    val blue: Color,
     val rust: Color,
     val green: Color,
     val divider: Color,
-    val onGold: Color,
+    val onBlue: Color,
     val isDark: Boolean,
 )
 
@@ -25,11 +25,11 @@ val DarkBirrColors = BirrColors(
     surfaceElevated = Color(0xFF22332D),
     textPrimary = Color(0xFFF2EFE6),
     textMuted = Color(0xFF8B958F),
-    gold = Color(0xFFD4A85A),
+    blue = Color(0xFF5B8DEF),
     rust = Color(0xFFC4634F),
     green = Color(0xFF6B9E7F),
     divider = Color(0xFF2A3A34),
-    onGold = Color(0xFF0F1A17),
+    onBlue = Color(0xFFFFFFFF),
     isDark = true,
 )
 
@@ -39,11 +39,11 @@ val LightBirrColors = BirrColors(
     surfaceElevated = Color(0xFFE7EFEA),
     textPrimary = Color(0xFF15201C),
     textMuted = Color(0xFF5F6F68),
-    gold = Color(0xFFA67B2E),
+    blue = Color(0xFF2563EB),
     rust = Color(0xFFB04A38),
     green = Color(0xFF3F7A58),
     divider = Color(0xFFD5E0DB),
-    onGold = Color(0xFFFFFFFF),
+    onBlue = Color(0xFFFFFFFF),
     isDark = false,
 )
 
@@ -65,8 +65,8 @@ val TextPrimary: Color
 val TextMuted: Color
     @Composable @ReadOnlyComposable get() = LocalBirrColors.current.textMuted
 
-val AccentGold: Color
-    @Composable @ReadOnlyComposable get() = LocalBirrColors.current.gold
+val AccentBlue: Color
+    @Composable @ReadOnlyComposable get() = LocalBirrColors.current.blue
 
 val AccentRust: Color
     @Composable @ReadOnlyComposable get() = LocalBirrColors.current.rust
@@ -77,5 +77,5 @@ val AccentGreen: Color
 val Divider: Color
     @Composable @ReadOnlyComposable get() = LocalBirrColors.current.divider
 
-val OnGold: Color
-    @Composable @ReadOnlyComposable get() = LocalBirrColors.current.onGold
+val OnBlue: Color
+    @Composable @ReadOnlyComposable get() = LocalBirrColors.current.onBlue

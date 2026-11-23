@@ -43,7 +43,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.verifyetb.app.data.local.entity.TransactionEntity
 import com.verifyetb.app.ui.components.EmptyHint
 import com.verifyetb.app.ui.components.TransactionRow
-import com.verifyetb.app.ui.theme.AccentGold
+import com.verifyetb.app.ui.theme.AccentBlue
 import com.verifyetb.app.ui.theme.BgPrimary
 import com.verifyetb.app.ui.theme.BgSurface
 import com.verifyetb.app.ui.theme.Divider
@@ -122,7 +122,7 @@ fun TransactionListScreen(
             )
             if (periodActive) {
                 TextButton(onClick = viewModel::clearPeriodFilter) {
-                    Text("Clear period", color = AccentGold)
+                    Text("Clear period", color = AccentBlue)
                 }
             }
         }
@@ -135,11 +135,11 @@ fun TransactionListScreen(
             singleLine = true,
             shape = RoundedCornerShape(10.dp),
             colors = OutlinedTextFieldDefaults.colors(
-                focusedBorderColor = AccentGold,
+                focusedBorderColor = AccentBlue,
                 unfocusedBorderColor = Divider,
                 focusedTextColor = TextPrimary,
                 unfocusedTextColor = TextPrimary,
-                cursorColor = AccentGold,
+                cursorColor = AccentBlue,
                 focusedContainerColor = BgSurface,
                 unfocusedContainerColor = BgSurface,
             ),
@@ -216,14 +216,14 @@ private fun TypeChip(label: String, selected: Boolean, onClick: () -> Unit) {
         colors = FilterChipDefaults.filterChipColors(
             containerColor = BgSurface,
             labelColor = TextMuted,
-            selectedContainerColor = AccentGold.copy(alpha = 0.2f),
-            selectedLabelColor = AccentGold,
+            selectedContainerColor = AccentBlue.copy(alpha = 0.2f),
+            selectedLabelColor = AccentBlue,
         ),
         border = FilterChipDefaults.filterChipBorder(
             enabled = true,
             selected = selected,
             borderColor = Divider,
-            selectedBorderColor = AccentGold,
+            selectedBorderColor = AccentBlue,
         ),
     )
 }

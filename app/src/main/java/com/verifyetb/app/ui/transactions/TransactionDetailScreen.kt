@@ -42,8 +42,8 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.verifyetb.app.data.local.entity.TransactionEntity
-import com.verifyetb.app.ui.theme.AccentGold
-import com.verifyetb.app.ui.theme.OnGold
+import com.verifyetb.app.ui.theme.AccentBlue
+import com.verifyetb.app.ui.theme.OnBlue
 import com.verifyetb.app.ui.theme.AccentGreen
 import com.verifyetb.app.ui.theme.AccentRust
 import com.verifyetb.app.ui.theme.AmountStyle
@@ -197,8 +197,8 @@ fun TransactionDetailScreen(
                         colors = FilterChipDefaults.filterChipColors(
                             containerColor = BgSurface,
                             labelColor = TextMuted,
-                            selectedContainerColor = AccentGold.copy(alpha = 0.22f),
-                            selectedLabelColor = AccentGold,
+                            selectedContainerColor = AccentBlue.copy(alpha = 0.22f),
+                            selectedLabelColor = AccentBlue,
                         ),
                     )
                 }
@@ -212,7 +212,7 @@ fun TransactionDetailScreen(
                 },
                 modifier = Modifier.fillMaxWidth().height(50.dp),
                 shape = RoundedCornerShape(8.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = AccentGold, contentColor = OnGold),
+                colors = ButtonDefaults.buttonColors(containerColor = AccentBlue, contentColor = OnBlue),
             ) {
                 Text("Save note")
             }
@@ -241,11 +241,11 @@ private fun DetailLine(label: String, value: String) {
 
 @Composable
 private fun fieldColors() = OutlinedTextFieldDefaults.colors(
-    focusedBorderColor = AccentGold,
+    focusedBorderColor = AccentBlue,
     unfocusedBorderColor = Divider,
     focusedTextColor = TextPrimary,
     unfocusedTextColor = TextPrimary,
-    cursorColor = AccentGold,
+    cursorColor = AccentBlue,
     focusedContainerColor = BgSurface,
     unfocusedContainerColor = BgSurface,
 )

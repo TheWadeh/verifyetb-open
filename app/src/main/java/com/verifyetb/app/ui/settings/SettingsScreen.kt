@@ -54,13 +54,13 @@ import com.verifyetb.app.parser.EthiopianInstitutions
 import com.verifyetb.app.parser.InstitutionKind
 import com.verifyetb.app.ui.components.InstitutionLogo
 import com.verifyetb.app.ui.components.InstitutionMultiSelect
-import com.verifyetb.app.ui.theme.AccentGold
+import com.verifyetb.app.ui.theme.AccentBlue
 import com.verifyetb.app.ui.theme.AccentGreen
 import com.verifyetb.app.ui.theme.AccentRust
 import com.verifyetb.app.ui.theme.BgPrimary
 import com.verifyetb.app.ui.theme.BgSurface
 import com.verifyetb.app.ui.theme.Divider
-import com.verifyetb.app.ui.theme.OnGold
+import com.verifyetb.app.ui.theme.OnBlue
 import com.verifyetb.app.ui.theme.TextMuted
 import com.verifyetb.app.ui.theme.TextPrimary
 import com.verifyetb.app.ui.theme.ThemeMode
@@ -185,7 +185,7 @@ fun SettingsScreen(
                                         ),
                                     )
                                 },
-                                colors = ButtonDefaults.buttonColors(containerColor = AccentGold, contentColor = OnGold),
+                                colors = ButtonDefaults.buttonColors(containerColor = AccentBlue, contentColor = OnBlue),
                                 shape = RoundedCornerShape(8.dp),
                                 modifier = Modifier.fillMaxWidth(),
                             ) { Text("Enable SMS") }
@@ -193,7 +193,7 @@ fun SettingsScreen(
                             Button(
                                 onClick = { viewModel.scanInbox() },
                                 enabled = !busy,
-                                colors = ButtonDefaults.buttonColors(containerColor = AccentGold, contentColor = OnGold),
+                                colors = ButtonDefaults.buttonColors(containerColor = AccentBlue, contentColor = OnBlue),
                                 shape = RoundedCornerShape(8.dp),
                                 modifier = Modifier.fillMaxWidth(),
                             ) { Text("Check for new SMS") }
@@ -209,7 +209,7 @@ fun SettingsScreen(
                         if (status != null) {
                             Text(
                                 text = status!!,
-                                color = AccentGold,
+                                color = AccentBlue,
                                 style = MaterialTheme.typography.bodySmall,
                                 modifier = Modifier.padding(top = 8.dp),
                             )
@@ -326,7 +326,7 @@ fun SettingsScreen(
                                             balanceStatus = "Saved ${inst.displayName}"
                                         },
                                     ) {
-                                        Text("Save", color = AccentGold)
+                                        Text("Save", color = AccentBlue)
                                     }
                                 }
                             }
@@ -334,7 +334,7 @@ fun SettingsScreen(
                         if (balanceStatus != null) {
                             Text(
                                 text = balanceStatus!!,
-                                color = AccentGold,
+                                color = AccentBlue,
                                 style = MaterialTheme.typography.bodySmall,
                                 modifier = Modifier.padding(top = 8.dp),
                             )
@@ -381,7 +381,7 @@ fun SettingsScreen(
                                 viewModel.addCategory(newCategory)
                                 newCategory = ""
                             },
-                            colors = ButtonDefaults.buttonColors(containerColor = AccentGold, contentColor = OnGold),
+                            colors = ButtonDefaults.buttonColors(containerColor = AccentBlue, contentColor = OnBlue),
                             shape = RoundedCornerShape(8.dp),
                             modifier = Modifier.fillMaxWidth(),
                         ) { Text("Add category") }
@@ -462,10 +462,10 @@ private fun ThemeModeChip(label: String, selected: Boolean, onClick: () -> Unit)
     val shape = RoundedCornerShape(20.dp)
     Text(
         text = label,
-        color = if (selected) OnGold else TextMuted,
+        color = if (selected) OnBlue else TextMuted,
         style = MaterialTheme.typography.labelLarge,
         modifier = Modifier
-            .background(if (selected) AccentGold else BgPrimary, shape)
+            .background(if (selected) AccentBlue else BgPrimary, shape)
             .clickable(onClick = onClick)
             .padding(horizontal = 14.dp, vertical = 8.dp),
     )
@@ -473,11 +473,11 @@ private fun ThemeModeChip(label: String, selected: Boolean, onClick: () -> Unit)
 
 @Composable
 private fun fieldColors() = OutlinedTextFieldDefaults.colors(
-    focusedBorderColor = AccentGold,
+    focusedBorderColor = AccentBlue,
     unfocusedBorderColor = Divider,
     focusedTextColor = TextPrimary,
     unfocusedTextColor = TextPrimary,
-    cursorColor = AccentGold,
+    cursorColor = AccentBlue,
     focusedContainerColor = BgPrimary,
     unfocusedContainerColor = BgPrimary,
 )

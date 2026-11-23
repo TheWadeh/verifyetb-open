@@ -107,7 +107,7 @@ object InstitutionLogos {
         "enat" -> Color(0xFFD81B60)
         "amhara" -> Color(0xFFC62828)
         "oromia" -> Color(0xFF558B2F)
-        "cash" -> DarkBirrColors.gold
+        "cash" -> DarkBirrColors.blue
         else -> Color(0xFF546E7A)
     }
 

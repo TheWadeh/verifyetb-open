@@ -32,7 +32,7 @@ import com.verifyetb.app.ui.components.EmptyHint
 import com.verifyetb.app.ui.components.InstitutionLogo
 import com.verifyetb.app.ui.components.SectionLabel
 import com.verifyetb.app.ui.components.TransactionRow
-import com.verifyetb.app.ui.theme.AccentGold
+import com.verifyetb.app.ui.theme.AccentBlue
 import com.verifyetb.app.ui.theme.AccentGreen
 import com.verifyetb.app.ui.theme.AccentRust
 import com.verifyetb.app.ui.theme.BgPrimary
@@ -84,7 +84,7 @@ fun AccountDetailScreen(
                 Text("Balance", color = TextMuted, style = MaterialTheme.typography.labelMedium)
                 Text(
                     text = MoneyFormat.birr(ui.balance),
-                    color = AccentGold,
+                    color = AccentBlue,
                     style = MaterialTheme.typography.displayMedium,
                     modifier = Modifier.padding(top = 4.dp),
                 )
@@ -120,7 +120,7 @@ fun AccountDetailScreen(
                 ) {
                     SectionLabel("Recent")
                     TextButton(onClick = { onOpenAll(ui.displayName) }) {
-                        Text("See all", color = AccentGold)
+                        Text("See all", color = AccentBlue)
                     }
                 }
             }

@@ -25,8 +25,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
-import com.verifyetb.app.ui.theme.AccentGold
-import com.verifyetb.app.ui.theme.OnGold
+import com.verifyetb.app.ui.theme.AccentBlue
+import com.verifyetb.app.ui.theme.OnBlue
 import com.verifyetb.app.ui.theme.BgPrimary
 import com.verifyetb.app.ui.theme.TextMuted
 import com.verifyetb.app.ui.theme.TextPrimary
@@ -76,7 +76,7 @@ fun OnboardingScreen(
         Column {
             Text(
                 text = "Verifyetb",
-                color = AccentGold,
+                color = AccentBlue,
                 style = MaterialTheme.typography.headlineLarge,
             )
             Box(modifier = Modifier.height(28.dp))
@@ -105,8 +105,8 @@ fun OnboardingScreen(
                 modifier = Modifier.fillMaxWidth().height(52.dp),
                 shape = RoundedCornerShape(8.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = AccentGold,
-                    contentColor = OnGold,
+                    containerColor = AccentBlue,
+                    contentColor = OnBlue,
                 ),
             ) {
                 Text(text = "Allow SMS access")

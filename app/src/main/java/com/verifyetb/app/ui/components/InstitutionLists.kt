@@ -24,11 +24,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.verifyetb.app.parser.EthiopianInstitution
 import com.verifyetb.app.parser.EthiopianInstitutions
-import com.verifyetb.app.ui.theme.AccentGold
+import com.verifyetb.app.ui.theme.AccentBlue
 import com.verifyetb.app.ui.theme.BgElevated
 import com.verifyetb.app.ui.theme.BgSurface
 import com.verifyetb.app.ui.theme.Divider
-import com.verifyetb.app.ui.theme.OnGold
+import com.verifyetb.app.ui.theme.OnBlue
 import com.verifyetb.app.ui.theme.TextMuted
 import com.verifyetb.app.ui.theme.TextPrimary
 
@@ -143,7 +143,7 @@ private fun PickerGroup(
                 modifier = Modifier.weight(1f),
             )
             if (onSelectAll != null) {
-                TextButton(onClick = onSelectAll) { Text("All", color = AccentGold) }
+                TextButton(onClick = onSelectAll) { Text("All", color = AccentBlue) }
             }
             if (onClear != null) {
                 TextButton(onClick = onClear) { Text("Clear", color = TextMuted) }
@@ -199,15 +199,15 @@ private fun BoxCheck(selected: Boolean) {
     androidx.compose.foundation.layout.Box(
         modifier = Modifier
             .size(22.dp)
-            .background(if (selected) AccentGold else BgElevated, shape)
-            .border(1.dp, if (selected) AccentGold else Divider, shape),
+            .background(if (selected) AccentBlue else BgElevated, shape)
+            .border(1.dp, if (selected) AccentBlue else Divider, shape),
         contentAlignment = Alignment.Center,
     ) {
         if (selected) {
             Icon(
                 Icons.Filled.Check,
                 contentDescription = null,
-                tint = OnGold,
+                tint = OnBlue,
                 modifier = Modifier.size(14.dp),
             )
         }

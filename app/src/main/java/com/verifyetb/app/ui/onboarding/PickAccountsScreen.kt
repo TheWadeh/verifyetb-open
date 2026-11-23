@@ -27,9 +27,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.verifyetb.app.parser.EthiopianInstitutions
 import com.verifyetb.app.ui.components.InstitutionMultiSelect
-import com.verifyetb.app.ui.theme.AccentGold
+import com.verifyetb.app.ui.theme.AccentBlue
 import com.verifyetb.app.ui.theme.BgPrimary
-import com.verifyetb.app.ui.theme.OnGold
+import com.verifyetb.app.ui.theme.OnBlue
 import com.verifyetb.app.ui.theme.TextMuted
 import com.verifyetb.app.ui.theme.TextPrimary
 
@@ -57,7 +57,7 @@ fun PickAccountsScreen(
             .navigationBarsPadding()
             .padding(horizontal = 20.dp, vertical = 24.dp),
     ) {
-        Text("Your accounts", color = AccentGold, style = MaterialTheme.typography.titleMedium)
+        Text("Your accounts", color = AccentBlue, style = MaterialTheme.typography.titleMedium)
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = "Choose banks and wallets",
@@ -103,7 +103,7 @@ fun PickAccountsScreen(
             enabled = bankWalletCount > 0,
             modifier = Modifier.fillMaxWidth().height(52.dp),
             shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = AccentGold, contentColor = OnGold),
+            colors = ButtonDefaults.buttonColors(containerColor = AccentBlue, contentColor = OnBlue),
         ) {
             Text("Continue")
         }

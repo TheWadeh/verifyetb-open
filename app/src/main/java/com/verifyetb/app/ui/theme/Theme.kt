@@ -34,8 +34,8 @@ enum class ThemeMode {
 
 private fun schemeFor(colors: BirrColors) = if (colors.isDark) {
     darkColorScheme(
-        primary = colors.gold,
-        onPrimary = colors.onGold,
+        primary = colors.blue,
+        onPrimary = colors.onBlue,
         secondary = colors.green,
         onSecondary = colors.textPrimary,
         tertiary = colors.rust,
@@ -50,8 +50,8 @@ private fun schemeFor(colors: BirrColors) = if (colors.isDark) {
     )
 } else {
     lightColorScheme(
-        primary = colors.gold,
-        onPrimary = colors.onGold,
+        primary = colors.blue,
+        onPrimary = colors.onBlue,
         secondary = colors.green,
         onSecondary = Color.White,
         tertiary = colors.rust,

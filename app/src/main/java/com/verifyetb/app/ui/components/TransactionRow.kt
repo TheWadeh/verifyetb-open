@@ -17,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.verifyetb.app.data.local.entity.TransactionEntity
 import com.verifyetb.app.parser.MoneyParse
-import com.verifyetb.app.ui.theme.AccentGold
+import com.verifyetb.app.ui.theme.AccentBlue
 import com.verifyetb.app.ui.theme.AccentGreen
 import com.verifyetb.app.ui.theme.AccentRust
 import com.verifyetb.app.ui.theme.AmountStyle
@@ -80,7 +80,7 @@ fun TransactionRow(
                     }
                     Text(
                         text = subtitle,
-                        color = if (!isAirtime && tx.needsNote) AccentGold else TextMuted,
+                        color = if (!isAirtime && tx.needsNote) AccentBlue else TextMuted,
                         style = androidx.compose.material3.MaterialTheme.typography.bodySmall,
                         modifier = Modifier.padding(top = 4.dp),
                     )

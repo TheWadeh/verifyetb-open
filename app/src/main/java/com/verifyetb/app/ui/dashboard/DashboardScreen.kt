@@ -57,14 +57,14 @@ import com.verifyetb.app.ui.components.EmptyHint
 import com.verifyetb.app.ui.components.InstitutionLogo
 import com.verifyetb.app.ui.components.SectionLabel
 import com.verifyetb.app.ui.components.TransactionRow
-import com.verifyetb.app.ui.theme.AccentGold
+import com.verifyetb.app.ui.theme.AccentBlue
 import com.verifyetb.app.ui.theme.AccentGreen
 import com.verifyetb.app.ui.theme.AccentRust
 import com.verifyetb.app.ui.theme.BgElevated
 import com.verifyetb.app.ui.theme.BgPrimary
 import com.verifyetb.app.ui.theme.BgSurface
 import com.verifyetb.app.ui.theme.Divider
-import com.verifyetb.app.ui.theme.OnGold
+import com.verifyetb.app.ui.theme.OnBlue
 import com.verifyetb.app.ui.theme.TextMuted
 import com.verifyetb.app.ui.theme.TextPrimary
 import com.verifyetb.app.util.DashboardPeriod
@@ -141,7 +141,7 @@ fun DashboardScreen(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Column(modifier = Modifier.weight(1f).padding(start = 12.dp)) {
-                    Text("Verifyetb", color = AccentGold, style = MaterialTheme.typography.titleMedium)
+                    Text("Verifyetb", color = AccentBlue, style = MaterialTheme.typography.titleMedium)
                     Text("Pull down to sync new SMS", color = TextMuted, style = MaterialTheme.typography.bodySmall)
                 }
                 IconButton(onClick = onOpenInsights) {
@@ -158,7 +158,7 @@ fun DashboardScreen(
             if (refreshMessage != null) {
                 Text(
                     text = refreshMessage!!,
-                    color = AccentGold,
+                    color = AccentBlue,
                     style = MaterialTheme.typography.bodySmall,
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 2.dp),
                 )
@@ -277,7 +277,7 @@ fun DashboardScreen(
                         ) {
                             SectionLabel("Recent")
                             TextButton(onClick = onOpenTransactions) {
-                                Text("See all", color = AccentGold)
+                                Text("See all", color = AccentBlue)
                             }
                         }
                     }
@@ -301,8 +301,8 @@ fun DashboardScreen(
         FloatingActionButton(
             onClick = onAddManual,
             modifier = Modifier.align(Alignment.BottomEnd).padding(end = 20.dp, bottom = 20.dp),
-            containerColor = AccentGold,
-            contentColor = OnGold,
+            containerColor = AccentBlue,
+            contentColor = OnBlue,
             shape = CircleShape,
             elevation = FloatingActionButtonDefaults.elevation(defaultElevation = 6.dp, pressedElevation = 8.dp),
         ) {
@@ -323,11 +323,11 @@ private fun BalanceHero(
             .fillMaxWidth()
             .background(
                 brush = Brush.linearGradient(
-                    colors = listOf(BgSurface, BgElevated, AccentGold.copy(alpha = 0.16f)),
+                    colors = listOf(BgSurface, BgElevated, AccentBlue.copy(alpha = 0.16f)),
                 ),
                 shape = RoundedCornerShape(20.dp),
             )
-            .border(1.dp, AccentGold.copy(alpha = 0.28f), RoundedCornerShape(20.dp))
+            .border(1.dp, AccentBlue.copy(alpha = 0.28f), RoundedCornerShape(20.dp))
             .padding(20.dp),
     ) {
         Text("All accounts", color = TextMuted, style = MaterialTheme.typography.labelMedium)
@@ -346,7 +346,7 @@ private fun BalanceHero(
         if (unresolved > 0) {
             Text(
                 text = if (unresolved == 1) "1 transaction needs a note — tap" else "$unresolved need notes — tap",
-                color = AccentGold,
+                color = AccentBlue,
                 style = MaterialTheme.typography.bodySmall,
                 modifier = Modifier.padding(top = 10.dp).clickable(onClick = onUnresolved),
             )
@@ -427,7 +427,7 @@ private fun AccountCard(account: AccountRowUi, onClick: () -> Unit) {
                     )
                 }
             }
-            Text(MoneyFormat.birr(account.balance), color = AccentGold, style = MaterialTheme.typography.titleMedium)
+            Text(MoneyFormat.birr(account.balance), color = AccentBlue, style = MaterialTheme.typography.titleMedium)
         }
         Spacer(modifier = Modifier.height(12.dp))
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -446,12 +446,12 @@ private fun InsightsEntry(onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .background(BgSurface, RoundedCornerShape(20.dp))
-            .border(1.dp, AccentGold.copy(alpha = 0.35f), RoundedCornerShape(20.dp))
+            .border(1.dp, AccentBlue.copy(alpha = 0.35f), RoundedCornerShape(20.dp))
             .clickable(onClick = onClick)
             .padding(horizontal = 16.dp, vertical = 14.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Icon(Icons.Outlined.BarChart, contentDescription = null, tint = AccentGold)
+        Icon(Icons.Outlined.BarChart, contentDescription = null, tint = AccentBlue)
         Column(modifier = Modifier.weight(1f).padding(horizontal = 12.dp)) {
             Text("Charts and heatmap", color = TextPrimary, style = MaterialTheme.typography.titleMedium)
             Text(
@@ -469,11 +469,11 @@ private fun PeriodChip(label: String, selected: Boolean, onClick: () -> Unit) {
     val shape = RoundedCornerShape(20.dp)
     Text(
         text = label,
-        color = if (selected) OnGold else TextMuted,
+        color = if (selected) OnBlue else TextMuted,
         style = MaterialTheme.typography.labelLarge,
         modifier = Modifier
-            .background(if (selected) AccentGold else BgSurface, shape)
-            .border(1.dp, if (selected) AccentGold else Divider, shape)
+            .background(if (selected) AccentBlue else BgSurface, shape)
+            .border(1.dp, if (selected) AccentBlue else Divider, shape)
             .clickable(onClick = onClick)
             .padding(horizontal = 14.dp, vertical = 8.dp),
     )
