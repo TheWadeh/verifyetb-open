@@ -1,4 +1,4 @@
-# Verifyetb
+# verifyetb-open
 
 > Offline Android expense tracker for Ethiopian banks and mobile wallets.
 > No account. No server. Your data stays on your phone.
